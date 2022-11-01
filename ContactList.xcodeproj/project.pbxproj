@@ -16,6 +16,7 @@
 		C244E3DF2911BDA300995F49 /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3DE2911BDA300995F49 /* ContactListTests.swift */; };
 		C244E3E92911BDA300995F49 /* ContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3E82911BDA300995F49 /* ContactListUITests.swift */; };
 		C244E3EB2911BDA300995F49 /* ContactListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3EA2911BDA300995F49 /* ContactListUITestsLaunchTests.swift */; };
+		C244E3FE2911BF2D00995F49 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3FD2911BF2D00995F49 /* PersonTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C244E3E42911BDA300995F49 /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C244E3E82911BDA300995F49 /* ContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITests.swift; sourceTree = "<group>"; };
 		C244E3EA2911BDA300995F49 /* ContactListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C244E3FD2911BF2D00995F49 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,11 @@
 		C244E3C62911BD9B00995F49 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				C244E3C72911BD9B00995F49 /* AppDelegate.swift */,
-				C244E3C92911BD9B00995F49 /* SceneDelegate.swift */,
-				C244E3CB2911BD9B00995F49 /* ViewController.swift */,
-				C244E3CD2911BD9B00995F49 /* Main.storyboard */,
-				C244E3D02911BDA200995F49 /* Assets.xcassets */,
-				C244E3D22911BDA200995F49 /* LaunchScreen.storyboard */,
+				C244E3F92911BDE600995F49 /* ViewConrollers */,
+				C244E3FB2911BE5300995F49 /* Models */,
+				C244E3F72911BDBA00995F49 /* Storyboards */,
+				C244E3F82911BDD800995F49 /* Supporsts */,
+				C244E3FA2911BE0800995F49 /* Sourse */,
 				C244E3D52911BDA200995F49 /* Info.plist */,
 			);
 			path = ContactList;
@@ -113,6 +114,7 @@
 		C244E3DD2911BDA300995F49 /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
+				C244E3FC2911BEF400995F49 /* Models */,
 				C244E3DE2911BDA300995F49 /* ContactListTests.swift */,
 			);
 			path = ContactListTests;
@@ -125,6 +127,55 @@
 				C244E3EA2911BDA300995F49 /* ContactListUITestsLaunchTests.swift */,
 			);
 			path = ContactListUITests;
+			sourceTree = "<group>";
+		};
+		C244E3F72911BDBA00995F49 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C244E3CD2911BD9B00995F49 /* Main.storyboard */,
+				C244E3D22911BDA200995F49 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C244E3F82911BDD800995F49 /* Supporsts */ = {
+			isa = PBXGroup;
+			children = (
+				C244E3C72911BD9B00995F49 /* AppDelegate.swift */,
+				C244E3C92911BD9B00995F49 /* SceneDelegate.swift */,
+			);
+			path = Supporsts;
+			sourceTree = "<group>";
+		};
+		C244E3F92911BDE600995F49 /* ViewConrollers */ = {
+			isa = PBXGroup;
+			children = (
+				C244E3CB2911BD9B00995F49 /* ViewController.swift */,
+			);
+			path = ViewConrollers;
+			sourceTree = "<group>";
+		};
+		C244E3FA2911BE0800995F49 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				C244E3D02911BDA200995F49 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		C244E3FB2911BE5300995F49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C244E3FC2911BEF400995F49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C244E3FD2911BF2D00995F49 /* PersonTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C244E3FE2911BF2D00995F49 /* PersonTests.swift in Sources */,
 				C244E3DF2911BDA300995F49 /* ContactListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
