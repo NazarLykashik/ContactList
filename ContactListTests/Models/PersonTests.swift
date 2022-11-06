@@ -6,30 +6,52 @@
 //
 
 import XCTest
+@testable import ContactList
 
 final class PersonTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testInitPersonWithNameAndPhone(){
+        let person = Person(name: "Foo", phone: "Bar")
+        XCTAssertNotNil(person)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInitPersonWithFullNameAndPhone(){
+        let person = Person(name: "Foo", surname: "Bar", phone: "Buz")
+        XCTAssertNotNil(person)
     }
-
+    func testWhenGivenNameAndPhoneSetsNameAndPhone(){
+        let person = Person(name: "Foo", phone: "Bar")
+        XCTAssertEqual(person.name, "Foo")
+        XCTAssertEqual(person.phone, "Bar")
+    }
+    func testWhenGivenSurnameSetsSurname(){
+        let person = Person(name: "Foo", surname: "Bar", phone: "Buz")
+        XCTAssertTrue(person.surname == "Bar")
+    }
+    func testInitPersonWithDate(){
+        let person = Person(name: "Foo", phone: "Bar")
+        XCTAssertNotNil(person.date)
+    }
+    func testInitPersonWithFullNameAndDate(){
+        let person = Person(name: "Foo", surname: "Bar", phone: "Buz")
+        XCTAssertNotNil(person.date)
+    }
+    func testInitPersonWithImage(){
+        let image = #imageLiteral(resourceName: "pngtree-cartoon-contact-icon-download-image_1251409")
+        let imageData = image.pngData()
+        let person = Person(name: "Foo", phone: "Bar", imageData: imageData)
+        XCTAssertNotNil(person.imageData)
+    }
+    func testInitPersonWithFullNameAndImage(){
+        let image = #imageLiteral(resourceName: "pngtree-cartoon-contact-icon-download-image_1251409")
+        let imageData = image.pngData()
+        let person = Person(name: "Foo", surname: "Bar", phone: "Buz", imageData: imageData)
+        XCTAssertNotNil(person.imageData)
+    }
 }
