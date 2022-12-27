@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22D3250291954DB00E04F9A /* ContactManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D324F291954DB00E04F9A /* ContactManagerTests.swift */; };
+		C22D32532919562B00E04F9A /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22D32522919562B00E04F9A /* ContactManager.swift */; };
 		C244E3C82911BD9B00995F49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3C72911BD9B00995F49 /* AppDelegate.swift */; };
 		C244E3CA2911BD9B00995F49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3C92911BD9B00995F49 /* SceneDelegate.swift */; };
 		C244E3CC2911BD9B00995F49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C244E3CB2911BD9B00995F49 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C22D324F291954DB00E04F9A /* ContactManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManagerTests.swift; sourceTree = "<group>"; };
+		C22D32522919562B00E04F9A /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		C244E3C42911BD9B00995F49 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C244E3C72911BD9B00995F49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C244E3C92911BD9B00995F49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22D324E291954A200E04F9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C22D324F291954DB00E04F9A /* ContactManagerTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C22D32512919560F00E04F9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C22D32522919562B00E04F9A /* ContactManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C244E3BB2911BD9B00995F49 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,7 @@
 		C244E3C62911BD9B00995F49 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				C22D32512919560F00E04F9A /* Helpers */,
 				C244E3D52911BDA200995F49 /* Info.plist */,
 				C244E3F92911BDE600995F49 /* ViewConrollers */,
 				C244E3FB2911BE5300995F49 /* Models */,
@@ -116,6 +137,7 @@
 		C244E3DD2911BDA300995F49 /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
+				C22D324E291954A200E04F9A /* Helpers */,
 				C244E3FC2911BEF400995F49 /* Models */,
 				C244E3DE2911BDA300995F49 /* ContactListTests.swift */,
 			);
@@ -312,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22D32532919562B00E04F9A /* ContactManager.swift in Sources */,
 				C244E3CC2911BD9B00995F49 /* ViewController.swift in Sources */,
 				C244E3C82911BD9B00995F49 /* AppDelegate.swift in Sources */,
 				C244E4002918303200995F49 /* Person.swift in Sources */,
@@ -325,6 +348,7 @@
 			files = (
 				C244E3FE2911BF2D00995F49 /* PersonTests.swift in Sources */,
 				C244E3DF2911BDA300995F49 /* ContactListTests.swift in Sources */,
+				C22D3250291954DB00E04F9A /* ContactManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

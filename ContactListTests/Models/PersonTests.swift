@@ -9,13 +9,24 @@ import XCTest
 @testable import ContactList
 
 final class PersonTests: XCTestCase {
+    
+    var image: UIImage?
+    var imageData: Data?
 
     override func setUp() {
         super.setUp()
+        
+        image = #imageLiteral(resourceName: "pngtree-cartoon-contact-icon-download-image_1251409")
+        guard let image = image else { return }
+        imageData = image.pngData()
+        
     }
 
     override func tearDown() {
         super.tearDown()
+        
+        image = nil
+        imageData = nil
     }
     func testInitPersonWithNameAndPhone(){
         let person = Person(name: "Foo", phone: "Bar")
@@ -43,14 +54,12 @@ final class PersonTests: XCTestCase {
         XCTAssertNotNil(person.date)
     }
     func testInitPersonWithImage(){
-        let image = #imageLiteral(resourceName: "pngtree-cartoon-contact-icon-download-image_1251409")
-        let imageData = image.pngData()
+        
         let person = Person(name: "Foo", phone: "Bar", imageData: imageData)
         XCTAssertNotNil(person.imageData)
     }
     func testInitPersonWithFullNameAndImage(){
-        let image = #imageLiteral(resourceName: "pngtree-cartoon-contact-icon-download-image_1251409")
-        let imageData = image.pngData()
+        
         let person = Person(name: "Foo", surname: "Bar", phone: "Buz", imageData: imageData)
         XCTAssertNotNil(person.imageData)
     }
